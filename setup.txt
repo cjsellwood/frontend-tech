@@ -1,0 +1,5 @@
+npx create-react-app name --template typescript
+cd name
+npm i react-router-dom@6
+npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^5
+npm i @reduxjs/toolkit
