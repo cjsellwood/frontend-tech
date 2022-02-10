@@ -3,3 +3,9 @@ cd name
 npm i react-router-dom@6
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^5
 npm i @reduxjs/toolkit
+npm i gh-pages
+
+git branch "name" - create new branch
+git checkout "name" - switch to branch
+
+toolkit
