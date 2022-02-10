@@ -7,5 +7,9 @@ npm i gh-pages
 
 git branch "name" - create new branch
 git checkout "name" - switch to branch
+git push origin "name" - push branch to github
+- then can create a pull request to merge change into master branch
+
+
 
 toolkit
