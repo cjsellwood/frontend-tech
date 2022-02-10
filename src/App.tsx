@@ -9,6 +9,7 @@ import ChakraTypography from "./ChakraTypography";
 import ChakraOverlay from "./ChakraOverlay";
 import ChakraDisclosure from "./ChakraDisclosure";
 import ChakraNavigation from "./ChakraNavigation";
+import ReduxExample from "./ReduxExample"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                 <Link to="/chakraOverlay">Chakra Overlay</Link>
                 <Link to="/chakraDisclosure">Chakra Disclosure</Link>
                 <Link to="/chakraNavigation">Chakra Navigation</Link>
+                <Link to="/redux">Redux Toolkit</Link>
               </Stack>
             </header>
           }
@@ -39,6 +41,7 @@ function App() {
         <Route path="/chakraOverlay" element={<ChakraOverlay />} />
         <Route path="/chakraDisclosure" element={<ChakraDisclosure />} />
         <Route path="/chakraNavigation" element={<ChakraNavigation />} />
+        <Route path="/redux" element={<ReduxExample/>}/>
       </Routes>
     </div>
   );

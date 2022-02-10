@@ -2,14 +2,11 @@ npx create-react-app name --template typescript
 cd name
 npm i react-router-dom@6
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^5
-npm i @reduxjs/toolkit
-npm i gh-pages
+npm i @reduxjs/toolkit react-redux
+npm i gh-pages + predeploy/deploy scripts
 
 git branch "name" - create new branch
 git checkout "name" - switch to branch
 git push origin "name" - push branch to github
 - then can create a pull request to merge change into master branch
-
-
-
-toolkit
+git pull origin master - add changes from newly merged branch to master

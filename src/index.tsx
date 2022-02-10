@@ -4,14 +4,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </ChakraProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
