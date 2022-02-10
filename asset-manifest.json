@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/test-frontend/static/js/main.dd1d1a9f.js",
+    "static/js/787.bf588523.chunk.js": "/test-frontend/static/js/787.bf588523.chunk.js",
+    "static/media/mountains.jpg": "/test-frontend/static/media/mountains.d9bdda76d162539bc414.jpg",
+    "index.html": "/test-frontend/index.html",
+    "main.dd1d1a9f.js.map": "/test-frontend/static/js/main.dd1d1a9f.js.map",
+    "787.bf588523.chunk.js.map": "/test-frontend/static/js/787.bf588523.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dd1d1a9f.js"
+  ]
+}
