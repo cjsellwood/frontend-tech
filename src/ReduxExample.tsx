@@ -10,11 +10,9 @@ const ReduxExample = () => {
   const data = useAppSelector((state) => state.todo.data);
   const dispatch = useAppDispatch();
 
-  console.log(data);
-
   useEffect(() => {
     dispatch(fetchTodo());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Box>

@@ -10,13 +10,13 @@ export interface Todo {
 export interface TodoState {
   data: Todo[];
   status: string;
-  error: string;
+  error: string | null;
 }
 
 const initialState: TodoState = {
   data: [],
-  status: "",
-  error: "",
+  status: "idle",
+  error: null,
 };
 
 export const fetchTodo = createAsyncThunk(
@@ -24,7 +24,6 @@ export const fetchTodo = createAsyncThunk(
   async (todos, { rejectWithValue }) => {
     try {
       const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-      console.log(res);
       if (res.status !== 200) {
         throw new Error("Not fetched");
       }
@@ -56,9 +55,10 @@ const todoSlice = createSlice({
       .addCase(fetchTodo.fulfilled, (state, action: PayloadAction<Todo[]>) => {
         state.data = action.payload;
         state.status = "idle";
+        state.error = null;
       })
       .addCase(fetchTodo.rejected, (state, action) => {
-        console.log(action);
+        state.status = "idle";
         if (action.payload) {
           state.error = action.payload as string;
         } else {
