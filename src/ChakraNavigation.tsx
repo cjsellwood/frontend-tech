@@ -2,7 +2,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
+  // BreadcrumbSeparator,
   Link as ChakraLink,
   Text,
   LinkBox,
