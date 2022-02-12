@@ -4,17 +4,16 @@ import { increment, decrement } from "./store/counterSlice";
 import { useEffect } from "react";
 import { fetchTodo, completeTodo, undoTodo } from "./store/todoSlice";
 import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
+import CounterDisplay from "./CounterDisplay";
 
 const ReduxExample = () => {
   const count = useAppSelector((state) => state.counter.value);
   const data = useAppSelector((state) => state.todo.data);
   const dispatch = useAppDispatch();
 
-  console.log(data);
-
   useEffect(() => {
     dispatch(fetchTodo());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Box>
@@ -28,7 +27,7 @@ const ReduxExample = () => {
         >
           Increment
         </Button>
-        <Text>{count}</Text>
+        <CounterDisplay count={count}/>
         <Button
           aria-label="Decrement value"
           bg="red.600"
@@ -44,25 +43,23 @@ const ReduxExample = () => {
           <Text>
             {todo.id}{" "}
             {todo.completed ? (
-              <CheckIcon
+              <Button
+                aria-label="undo todo"
                 ml="5"
-                w="10"
-                h="10"
-                color="green.500"
-                bg="gray.600"
                 cursor="pointer"
                 onClick={() => dispatch(undoTodo(i))}
-              />
+              >
+                <CheckIcon w="10" h="10" color="green.500" bg="gray.600" />
+              </Button>
             ) : (
-              <CloseIcon
+              <Button
+                aria-label="complete todo"
                 ml="5"
-                w="10"
-                h="10"
-                color="red.500"
-                bg="gray.600"
                 cursor="pointer"
                 onClick={() => dispatch(completeTodo(i))}
-              />
+              >
+                <CloseIcon w="10" h="10" color="red.500" bg="gray.600" />
+              </Button>
             )}
           </Text>
         </Box>
