@@ -19,5 +19,6 @@ jobs:
           start: npm start
 
       - name: Deployment
-        if: steps.jest.outcome == "success" && steps.cypress.outcome == "success"
+        needs: [jest, cypress]
+        if: steps.jest.outcome == 'success' && steps.cypress.outcome == 'success'
         run: npm run deploy
