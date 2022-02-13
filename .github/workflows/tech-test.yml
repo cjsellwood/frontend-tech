@@ -1,5 +1,5 @@
 name: tech-test
-on: [push]
+on: [pull-request]
 jobs:
   app-testing:
     runs-on: ubuntu-latest
