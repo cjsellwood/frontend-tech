@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import ChakraLayout from "./ChakraLayout";
-import { Stack } from "@chakra-ui/react";
+import { Heading, Stack } from "@chakra-ui/react";
 import ChakraForms from "./ChakraForms";
 import ChakraDataDisplay from "./ChakraDataDisplay";
 
@@ -19,6 +19,7 @@ function App() {
           path="/"
           element={
             <header className="App-header">
+              <Heading>Frontend Tech Test</Heading>
               <Stack>
                 <Link to="/chakraLayout">Chakra Test</Link>
                 <Link to="/chakraForms">Chakra Forms</Link>

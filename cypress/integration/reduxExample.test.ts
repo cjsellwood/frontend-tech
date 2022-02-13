@@ -1,4 +1,4 @@
-describe("My first test", () => {
+describe("Redux example component", () => {
   beforeEach(() => {
     // Intercepts server requests and replace with stubbed response
     cy.intercept(
