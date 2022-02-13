@@ -8,10 +8,16 @@ jobs:
       - run: npm install
 
       - name: Jest tests
+        id: jest
         run: npm test
 
       - name: Cypress testing
+        id: cypress
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
           start: npm start
+
+      - name: Deployment
+        if: steps.jest.outcome == "success" && steps.cypress.outcome === "success"
+        run: npm run deploy
