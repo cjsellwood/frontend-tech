@@ -15,8 +15,8 @@ jobs:
         id: cypress
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
           start: npm start
+          wait-on: "http://localhost:3000"
 
       - name: Deployment
         if: steps.jest.outcome == 'success' && steps.cypress.outcome == 'success'
