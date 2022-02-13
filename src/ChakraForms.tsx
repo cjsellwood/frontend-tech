@@ -71,7 +71,7 @@ const ChakraInputs = () => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) =>
     setValue(event.target.value);
 
-  const format = (val: string) => `$` + val;
+  const format = (val: string) => "$" + val;
   const parse = (val: string) => val.replace(/^\$/, "");
 
   const [value2, setValue2] = useState("1.53");

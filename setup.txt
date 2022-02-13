@@ -4,6 +4,8 @@ npm i react-router-dom@6
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^5
 npm i @reduxjs/toolkit react-redux
 npm i gh-pages + predeploy/deploy scripts
+npm i cypress --save-dev
+npm i --save-dev eslint eslint-config-prettier eslint-plugin-cypress eslint-plugin-jest eslint-plugin-prettier eslint-plugin-react prettier
 
 git branch "name" - create new branch
 git checkout "name" - switch to branch
@@ -12,3 +14,8 @@ git push origin "name" - push branch to github
 git checkout master
 git pull origin master - add changes from newly merged branch to master
 git branch -d "name" - delete branch once merged into master
+
+
+TODO
+Cypress
+Github Actions
