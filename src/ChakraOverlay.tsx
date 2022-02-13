@@ -379,7 +379,7 @@ const ChakraOverlay = () => {
             <DrawerHeader>{`${size} drawer contents`}</DrawerHeader>
             <DrawerBody>
               {size === "full"
-                ? `You're trapped 😆 , refresh the page to leave or press 'Esc' key.`
+                ? "You're trapped 😆 , refresh the page to leave or press 'Esc' key."
                 : null}
             </DrawerBody>
           </DrawerContent>
